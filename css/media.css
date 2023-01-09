@@ -7,6 +7,12 @@
         flex-direction: column;
         justify-content: space-between;
     }
+    .btn0 {
+        left: -8%;
+    }
+    .btn-creative {
+        left: 0;
+    }
 }
   /* Small */
 @media (max-width: 768px) {
@@ -104,7 +110,9 @@
     .footer-card-two {
         padding: 0;
     }
-}
+    .btn-box {
+        margin-top: 40px;
+    }
   /* Medium */
 @media (min-width: 768px) and (max-width: 992px) {
     .container {
@@ -141,4 +149,5 @@
         padding-left: 94px;
         padding-right: 94px;
     }   
+}
 }
