@@ -57,15 +57,50 @@ li a:hover::after {
 nav > a img {
     width: 80px;
 }
-.btn {
+/* menu-icon start */
+.menu-icon {
+    width: 20px;
+    height: 14px;
+    position: relative;
+    cursor: pointer;
     display: none;
-    font-size: 20px;
-    color: #72a1c0;
-    transition: all 0.3S;
 }
-.btn:focus + ul {
+.menu-icon span {
+    background-color: black;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    transition: all .3s ease;
+}
+.menu-icon span:first-child {
+    top: 0;
+}
+.menu-icon span:nth-child(2) {
+    top: 6px;
+}
+.menu-icon span:last-child {
+    top: 12px;
+}
+.menu-icon span:nth-child(2).show {
+    opacity: 0;
+}
+.menu-icon span:first-child.show,
+.menu-icon span:last-child.show {
+    top: 6px;
+    background-color: red;
+}
+.menu-icon span:first-child.show {
+    transform: rotate(45deg);
+}
+.menu-icon span:last-child.show {
+    transform: rotate(-45deg);
+}
+nav ul.show {
     display: block;
+    left: 0;
 }
+/* menu-icon end */
 /* end nav bar  */
 /* start home  */
 #home {
@@ -90,40 +125,35 @@ nav > a img {
     font-size: 50px;
     letter-spacing: 10px;
 }
-button {
+/* end home */
+/* start btn */
+.btn0 {
+    text-decoration: none;  
     background-color: transparent;
     border: none;
     color: #72a1c0;
     font-size: 20px;
     position: relative;
-}
-button a {
-    text-decoration: none;
-    width: 100%;
-    color: #72a1c0;
-    padding: 7px 30px;
-    border: 1px solid #72a1c0;
+    padding: 15px 20px;
     transition: all 0.3s;
+    border: 1px solid #000;
 }
-button::after {
-    content: ">";
-    width: 36.4px;
-    height: 36.4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.btn0 .span {
+    padding: 15px 20px;
+    border: 1px solid #000;
     position: absolute;
-    border: 1px solid #72a1c0;
-    top: -7.5px;
-    right: -31.5px;
+    top: 50%;
+    left: 100%;
+    transform: translate( calc(-50% + 27px) ,-50%);
     transition: all 0.3s;
 }
-button:hover::after,
-button:hover a {
+.btn0:hover,  
+.btn0:hover .span {
     background-color: #72a1c0;
     color: #fff;
 }
-/* END HOME */
+/* end btn */
+/* start main section */
 .main-sections {
     padding: 50px 0;
     text-align: center;
@@ -149,6 +179,8 @@ button:hover a {
     top: calc(100% + 20px);
     transform: translate(-50%, -100%);
 }
+/* end main section */
+/* start about */
 .about-content {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -156,6 +188,16 @@ button:hover a {
 .about-content-details {
     text-align: center;
     margin-top: 70px;
+    transition: all 0.3S;
+    padding: 30px 10px;
+}
+.about-content-details:hover {
+    background-color: #72a1c0;
+    color: #ddd;
+}
+.about-content-details:hover a {
+    background-color: #fff;
+    color: #72a1c0;
 }
 .about-content-details i {
     font-size: 30px;
@@ -202,7 +244,6 @@ button:hover a {
 .about-content-creative {
     display: flex;
     justify-content: space-between;
-
 }
 .about-content-creative .img-box {
     width: 50%;
@@ -251,8 +292,10 @@ button:hover a {
 }
 .our-creativity-details .details:hover i {
     color: #72a1c0;
+    transform: scale(1.5);
 }
 /* end about */
+/* start project */
 .projects-details {
     display: flex;
     justify-content: space-between;
@@ -262,10 +305,14 @@ button:hover a {
     text-align: center;
     width: 50%;
 }
+.projects-details .img-box img:hover  {
+    transform: scale(1.1);
+}
 .projects-details .img-box img{ 
-    width: 384px;
-    height: 100%;
-    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50% ;
+    transition: all 0.3s;
 }
 .projects-details .projects-content {
     width: 50%;
@@ -308,12 +355,23 @@ button:hover a {
 .proj .content-project div p {
     font-size: 14px;
 }
-.new-btn {
+.btn0 {
     margin-top: 0;
 }
+.last {
+    width: fit-content;
+    margin: auto;
+    padding: 10px 15px;
+    transition: all 0.3s;
+}
+.last:hover {
+    color: #ddd;
+    background-color: #000;
+}
+/* end project */
+/* start testimonials */
 .testimonials {
     background-color: #e1ebf4;
-
 }
 .testimonials .testimonials-content {
     display: grid;
@@ -383,6 +441,8 @@ button:hover a {
     border: 1px solid #000;
     padding: 20px 32px;
 }
+/* end testimonials */
+/* start footer */
 .footer {
     background-color: #e1ebf4;
     padding: 100px 0 20px 0;
@@ -430,7 +490,7 @@ button:hover a {
 }
 .footer-card-two ul {
     display: grid;
-    grid-template-columns: repeat(2,2fr);
+    grid-template-columns: repeat(2,1fr);
     list-style: none;
     padding: 0;
 }
@@ -480,3 +540,4 @@ button:hover a {
 .creator-name span {
     color: #72a1c0;
 }
+/* end footer */
