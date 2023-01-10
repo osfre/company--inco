@@ -49,6 +49,12 @@
     nav ul li {
         padding: 20px 0;
     }
+    nav ul i {
+        padding: 20px 0;
+        color: #fff;
+        border-top: 2px solid #000;
+        border-left: none;
+    }
     .menu-icon {
         display: block;
     }
@@ -67,7 +73,8 @@
         width: 100%;
     }
     .about-content-creative .content .title {
-        font-size: 20px;
+        font-size: 15px;
+        font-weight: bold;
     }
     .our-creativity-details .details {
         margin-bottom: 50px;
@@ -89,6 +96,7 @@
     }
     .projects-details .projects-content .title {
         font-size: 20px;
+        letter-spacing: normal;
     }
     .two {
         flex-direction: column-reverse;
@@ -112,7 +120,15 @@
     }
     .btn-box {
         margin-top: 40px;
+        margin-right: 40px;
     }
+    .main-sections h3 {
+    font-size: 23px;
+    }
+    .details-btween {
+        display: none;
+    }
+}
   /* Medium */
 @media (min-width: 768px) and (max-width: 992px) {
     .container {
@@ -149,5 +165,4 @@
         padding-left: 94px;
         padding-right: 94px;
     }   
-}
 }

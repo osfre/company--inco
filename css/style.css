@@ -30,10 +30,16 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 nav ul li {
     font-size: 18px;
     padding: 10px 30px;
+}
+nav ul i {
+    border-left: 2px solid #000;
+    padding-left: 20px;
+    cursor: pointer;
 }
 nav ul li a {
     width: 100%;
@@ -41,9 +47,9 @@ nav ul li a {
     text-decoration: none;
     position: relative;
 }
-li a::after {
+nav li a::after {
     content: "";
-    width: 0;
+    width: 20%;
     height: 3px;
     background-color: #72a1c0;
     position: absolute;
@@ -190,6 +196,7 @@ nav ul.show {
     margin-top: 70px;
     transition: all 0.3S;
     padding: 30px 10px;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
 }
 .about-content-details:hover {
     background-color: #72a1c0;
@@ -293,6 +300,11 @@ nav ul.show {
 .our-creativity-details .details:hover i {
     color: #72a1c0;
     transform: scale(1.5);
+}
+.details-btween {
+    font-size: 50px;
+    color: #cacdd6;
+    border-radius: 6px;
 }
 /* end about */
 /* start project */
@@ -499,12 +511,16 @@ nav ul.show {
     text-decoration: none;
     color: #000;
     transition: all 0.3s;
+    display: inline-block;
+    position: absolute;
+    transform: translateX(0);
 }
 .footer-card-two ul li:hover a {
     color: #72a1c0;
+    transform: translateX(14px);
 }
 .footer-card-two ul li {
-    padding: 10px 0;
+    padding: 20px 0;
 }
 .footer-card-three h4 {
     margin-bottom: 20px;
