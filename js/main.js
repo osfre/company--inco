@@ -23,9 +23,46 @@ links.forEach(link => {
 
 
 let mainTitle = document.title;
-window.addEventListener("blur", () => {
-    document.title = "Hey, Come Back";
-})
-window.addEventListener("focus", () => {
-    document.title = mainTitle;
-})
+// window.addEventListener("blur", () => {
+//     document.title = "Hey, Come Back";
+// })
+// window.addEventListener("focus", () => {
+//     document.title = mainTitle;
+// })
+
+window.onblur = () => {
+	document.title = "Hey, Come Back";
+}
+window.onfocus = () => {
+	document.title = mainTitle;
+}
+
+
+
+
+
+
+
+let nums  = document.querySelectorAll(".details div .num");
+let section = document.querySelector(".about-creative");
+let started = false;  
+
+
+window.onscroll = function () {
+	if (window.scrollY >= section.offsetTop) {
+		if (!started) {
+			nums.forEach((num) => startCount(num));
+		}
+		started = true;
+	}
+}
+
+function startCount(el) {
+	let goal = el.dataset.goal;
+	let counter = setInterval(() => {
+		el.textContent++;
+		if (el.textContent == goal) {
+			clearInterval(counter)
+		}
+	}, 2000 / goal);
+}
