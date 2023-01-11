@@ -168,20 +168,21 @@ btnTop.onclick = () => {
 
 let dark = document.getElementById("dark");
 let body = document.querySelector("body");
-let img_company = document.querySelectorAll(".img-company div img");
+let img_company = document.querySelectorAll(".img-company div svg");
 
 
 dark.onclick = () => {
 	if (body.classList.toggle("dark")) {
-		document.getElementById("logo").src = "../IMG/ss.png";
+		// document.getElementById("logo").src = "../IMG/ss.png";
+		document.querySelector("svg").style.fill = "#fff"
 		img_company.forEach(img => {
-				img.src = "../IMG/ss.png";
+				img.style.fill = "#fff"
 	});
 		} else
 		{
-		document.getElementById("logo").src = "../IMG/Untitled-1.svg";
+		document.querySelector("svg").style.fill = "black"
 		img_company.forEach(img => {
-				img.src = "../IMG/Untitled-1.svg";
+				img.style.fill = "black"
 	});
 		}
 }

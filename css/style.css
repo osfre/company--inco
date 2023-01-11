@@ -74,7 +74,7 @@ nav li a::after {
 li a:hover::after {
     width: 100%;
 }
-nav > a img {
+nav > a svg {
     width: 65px;
 }
 /* menu-icon start */
@@ -463,7 +463,7 @@ nav ul.show {
 .img-company div:hover::after {
     transform: scale(1);
 }
-.img-company div img {
+.img-company div svg {
     width: 120px;
 }
 .img-company div {
