@@ -45,6 +45,7 @@
     }
     nav ul li a {
         color: #fff;
+        
     }
     nav ul li {
         padding: 20px 0;
@@ -128,15 +129,15 @@
     .details-btween {
         display: none;
     }
+    .dark nav ul i {
+        border-left: 0px solid #fff;
+    }
 }
   /* Medium */
 @media (min-width: 768px) and (max-width: 992px) {
     .container {
         padding-left: 56px;
         padding-right: 56px;
-    }
-    nav ul li {
-        padding: 10px 20px;
     }
     .about-content-creative .img-box {
         display: none;
@@ -159,6 +160,9 @@
     .two {
         flex-direction: column-reverse;
     }
+    /* nav ul li a {
+            padding: 6px 10px;
+    } */
 }
 @media (min-width: 992px) and (max-width: 1200px) {
     .container {

@@ -1,0 +1,94 @@
+.dark {
+    background-color: #021929;
+}
+
+.dark nav ul i {
+    border-left: 2px solid #fff;
+} 
+.dark nav ul li a {
+    color: var(--color-fff);
+}
+.dark nav li a::after {
+    background-color: #fff;
+}
+.dark .menu-icon span {
+    background-color: #fff;
+}
+.dark .btn0 {
+    border: 1px solid #fff;
+    color: #fff;
+}
+.dark .btn0 .span {
+    border: 1px solid #ddd;
+}
+.dark .main-sections p {
+    color: #fff;
+}
+.dark .main-sections h3 {
+    color: #72a1c0;
+}
+.dark .main-sections h3::after {
+    background-color: #ddd;
+}
+.dark .about-content-details {
+    background-color: #fff;
+}
+.dark .about-content-details:hover {
+    background-color: #021929;
+    color: var(--color-ddd);
+}
+.dark .about-creative {
+    background-color: #021929;
+}
+.dark .about-creative p {
+    color: #fff;
+}
+.dark #our-creativity {
+    background-color: #021929;
+    color: #fff;
+}
+.dark .projects-details {
+    color: #fff;
+}
+.dark .proj {
+    background-color: #021929;
+    border: 1px solid #fff;
+}
+.dark .testimonials {
+    background-color: #021929;
+    color: #fff;
+}
+.dark .footer {
+    background-color: #021929;
+    color: #fff;
+}
+.dark .footer-card-two ul li a {
+    color: #fff;
+}
+.dark #home {
+    position: relative;
+    z-index: 1;
+}
+.dark #home::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.268);
+    z-index: -1;
+}
+.dark .img-company div {
+    border: 1px solid #fff;
+}
+.dark .btn-top {
+    color: #021929;
+}
+.dark .btn-top::after {
+    background-color: #fff;
+}
+.dark i.fa-brands.fa-github {
+    color: #72a1c0;
+}
+.dark i.fa-solid.fa-magnifying-glass {
+    color: #fff;
+}

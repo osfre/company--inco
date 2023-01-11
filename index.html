@@ -5,24 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>company-inco</title>
+    <link rel="stylesheet" href="css/dark.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
     <nav class="container">
-        <a href="#"><img src="IMG/S.png" alt="logo"></a>
+        <a href="#"><img id="logo" src="IMG/Untitled-1.svg" alt="logo"></a>
         <div class="menu-icon">
             <span class=""></span>
             <span class=""></span>
             <span class=""></span>
         </div>
         <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a class="active" href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#company">Service</a></li>
-            <li><a href="#testimonials">News</a></li>
+            <li><a href="#testimonials">Service</a></li>
+            <li><a href="">News</a></li>
             <li><a href="#footer">Contact</a></li>
             <i class="fa-solid fa-magnifying-glass"></i>
         </ul>
@@ -236,45 +237,45 @@
         <div class="container">
             <div class="img-company">
                 <div>
-                    <img src="IMG/S.png" alt="">
+                    <img src="IMG/Untitled-1.svg" alt="">
                 </div>
                 <div>
-                    <img src="IMG/S.png" alt="">
+                    <img src="IMG/Untitled-1.svg" alt="">
                 </div>
                 <div>
-                    <img src="IMG/S.png" alt="">
+                    <img src="IMG/Untitled-1.svg" alt="">
                 </div>
                 <div>
-                    <img src="IMG/S.png" alt="">
+                    <img src="IMG/Untitled-1.svg" alt="">
                 </div>
                 <div>
-                    <img src="IMG/S.png" alt="">
+                    <img src="IMG/Untitled-1.svg" alt="">
                 </div>
                 <div>
-                    <img src="IMG/S.png" alt="">
+                    <img src="IMG/Untitled-1.svg" alt="">
                 </div>
                 <div>
-                    <img src="IMG/S.png" alt="">
+                    <img src="IMG/Untitled-1.svg" alt="">
                 </div>
                 <div>
-                    <img src="IMG/S.png" alt="">
+                    <img src="IMG/Untitled-1.svg" alt="">
                 </div>
                 <div>
-                    <img src="IMG/S.png" alt="">
+                    <img src="IMG/Untitled-1.svg" alt="">
                 </div>
                 <div>
-                    <img src="IMG/S.png" alt="">
+                    <img src="IMG/Untitled-1.svg" alt="">
                 </div>
                 <div>
-                    <img src="IMG/S.png" alt="">
+                    <img src="IMG/Untitled-1.svg" alt="">
                 </div>
                 <div>
-                    <img src="IMG/S.png" alt="">
+                    <img src="IMG/Untitled-1.svg" alt="">
                 </div>
             </div>
         </div>
     </section>
-    <footer id="footer" class="footer">
+    <section id="footer" class="footer">
         <div class="container">
             <div class="footer-details">
                 <div class="footer-card">
@@ -287,7 +288,7 @@
                     <ul>
                         <li><a href="#"><i class="fa-brands fa-facebook-f" style="color:#1877F2;"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-twitter" style="color:#1DA1F2;"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-github" style="color:#131418;"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-linkedin-in" style="color:#0A66C2;"></i></a></li>
                     </ul>
                 </div>
@@ -326,7 +327,16 @@
             </div>
             <p class="creator-name"> Created By <span>Osama Freed Abu Watfa</span></p>
         </div>
-    </footer>
+    </section>
+    <div class="change-color" style="z-index: 9999;">
+        <span data-color="#65b6ff"></span>
+        <span data-color="#3285d0"></span>
+        <span data-color="#009aff"></span>
+        <button class="rest">Rest</button>
+        <i class="fa-solid fa-gear"></i>
+        <button id="dark">Dark</button>
+    </div>
+    <a><i class="btn-top fa-sharp fa-solid fa-arrow-up"></i></a>
     <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
     <script src="js/main.js"></script>
 </body>
