@@ -4,6 +4,7 @@
 }
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -42,11 +43,10 @@ nav ul {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    
 }
 nav ul li {
     font-size: 18px;
-    padding: 10px 20px;
+    padding: 10px 14px;
 }
 nav ul i {
     border-left: 2px solid #000;
@@ -58,7 +58,7 @@ nav ul li a {
     color: black;
     text-decoration: none;
     position: relative;
-    padding: 10px 0;
+    padding: 10px 10px;
 }
 nav li a::after {
     content: "";
@@ -630,7 +630,7 @@ i.fa-brands.fa-github {
 }
 
 
-.btn-top {
+a .btn-top {
     font-size: 20px;
     color: #fff;
     position: fixed;
@@ -662,3 +662,76 @@ i.fa-brands.fa-github {
     border: none;
     cursor: pointer;
 }
+form {
+    position: absolute;
+    top: 200%;
+    left: 99%;
+    transform: translate(-50%, -50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+    display: none;
+    width: 200px;
+    cursor: pointer;
+}
+form.active1 {
+    display: block;
+}
+
+input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    /* display: none; */
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 0 20px;
+    display: block;
+}
+
+.fa {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: -1px;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 18px;
+    transition: all 1s;
+    border: none;
+}
+/* form:hover {
+    
+} */
+
+/* form:hover input {
+    display: block;
+} */
+
+/* form:hover .fa {
+    background: #07051a;
+    color: white;
+} */
+
+
+
+/* 
+swiper js 
+typed js 
+wow js 
+animate js
+*/

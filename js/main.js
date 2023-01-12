@@ -95,18 +95,16 @@ window.onscroll = () => {
 
 // ////////////////////////////////////////////////////////////////////////
 function navScroll() {
-	let current = "";
 	sections.forEach((section) => {
     if (scrollY >= section.offsetTop - 300) {
-    	current = section.getAttribute("id");
-    }
-});
-	navlinks.forEach((a) => {
+		navlinks.forEach((a) => {
     	a.classList.remove("active");
-    if (a.getAttribute('href') == "#" + current) {
+    if (a.getAttribute('href') == "#" + section.getAttribute("id")) {
 		a.classList.add("active");
     }
 	});
+    }
+});
 }
 // ////////////////////////////////////////////////////////////////////////
 
@@ -121,7 +119,7 @@ function backgrounNav() {
 		}
 		else {
 			nav.style.background = "#cacdd6" ;
-	}
+		}
 	}
 }
 // ////////////////////////////////////////////////////////////////////////
@@ -154,9 +152,10 @@ function toTop() {
     }
     else {
 		btnTop.style.display = "none";
+		nav.style.background = null ;
+		
     }
 }
-
 btnTop.onclick = () => {
     window.scrollTo({
         top: 0,
@@ -173,7 +172,6 @@ let img_company = document.querySelectorAll(".img-company div svg");
 
 dark.onclick = () => {
 	if (body.classList.toggle("dark")) {
-		// document.getElementById("logo").src = "../IMG/ss.png";
 		document.querySelector("svg").style.fill = "#fff"
 		img_company.forEach(img => {
 				img.style.fill = "#fff"
@@ -192,3 +190,135 @@ dark.onclick = () => {
 
 
 
+
+let sarech = document.querySelector("form");
+let btnSarech = document.querySelector(".serBtn");
+let close2 = document.querySelector("i.fa.fa-solid.fa-magnifying-glass");
+
+
+
+btnSarech.onclick = function() {
+	sarech.classList.toggle("active1");
+}
+close2.onclick = function() {
+	sarech.classList.remove("active1");
+}
+
+
+
+
+
+
+
+ScrollReveal().reveal(".content", {
+  origin: "left",
+  distance: "250px",
+  opacity: 0,
+  duration: 2000,
+  ease: "ease-in-out",
+  reset: true,
+});
+ScrollReveal().reveal(".about-one", {
+  origin: "left",
+  distance: "250px",
+  opacity: 0,
+  duration: 2000,
+  ease: "ease-in-out",
+  reset: true,
+});
+ScrollReveal().reveal(".about-two", {
+  origin: "bottom",
+  distance: "250px",
+  opacity: 0,
+  duration: 2000,
+  ease: "ease-in-out",
+  reset: false,
+});
+ScrollReveal().reveal(".about-three", {
+  origin: "right",
+  distance: "250px",
+  opacity: 0,
+  duration: 2000,
+  ease: "ease-in-out",
+  reset: true,
+});
+ScrollReveal().reveal(".content-two", {
+  origin: "right",
+  distance: "250px",
+  opacity: 0,
+  duration: 2000,
+  ease: "ease-in-out",
+  reset: true,
+});
+ScrollReveal().reveal(".img-box", {
+  origin: "left",
+  distance: "250px",
+  opacity: 0,
+  duration: 2000,
+  ease: "ease-in-out",
+  reset: true,
+});
+ScrollReveal().reveal(".details1", {
+  origin: "bottom",
+  distance: "250px",
+  opacity: 0,
+  duration: 2000,
+  ease: "ease-in-out",
+  reset: true,
+});
+ScrollReveal().reveal(".details2", {
+  origin: "bottom",
+  distance: "250px",
+  opacity: 0,
+  duration: 2300,
+  ease: "ease-in-out",
+  reset: true,
+});
+ScrollReveal().reveal(".details3", {
+  origin: "bottom",
+  distance: "250px",
+  opacity: 0,
+  duration: 2600,
+  ease: "ease-in-out",
+  reset: true,
+});
+ScrollReveal().reveal(".details4", {
+  origin: "bottom",
+  distance: "250px",
+  opacity: 0,
+  duration: 3000,
+  ease: "ease-in-out",
+  reset: true,
+});
+ScrollReveal().reveal(".projects-details", {
+  origin: "right",
+  distance: "250px",
+  opacity: 0,
+  duration: 2000,
+  ease: "ease-in-out",
+  reset: true,
+});
+ScrollReveal().reveal(".card1", {
+  origin: "top",
+  distance: "250px",
+  opacity: 0,
+  duration: 2000,
+  ease: "ease-in-out",
+  reset: true,
+});
+ScrollReveal().reveal(".card2", {
+  origin: "top",
+  distance: "250px",
+  opacity: 0,
+  duration: 2300,
+  ease: "ease-in-out",
+  reset: true,
+});
+ScrollReveal().reveal(".card3", {
+  origin: "top",
+  distance: "250px",
+  opacity: 0,
+  duration: 2600,
+  ease: "ease-in-out",
+  reset: true,
+});

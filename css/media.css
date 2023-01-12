@@ -160,13 +160,20 @@
     .two {
         flex-direction: column-reverse;
     }
-    /* nav ul li a {
-            padding: 6px 10px;
-    } */
+    nav ul li{
+        padding: 6px 3px;
+    }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
     .container {
         padding-left: 94px;
         padding-right: 94px;
     }   
+    nav ul li {
+    padding: 10px 10px;
+    }
 }
+
+
+
+
