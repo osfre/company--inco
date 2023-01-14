@@ -64,12 +64,13 @@ nav li a::after {
     content: "";
     width: 20%;
     height: 3px;
-    background-color: var(--main-color);
+    /* background-color: var(--main-color); */
     position: absolute;
     right: 0;
     top: 100%;
     transition: all 0.3s;
 }
+
 
 li a:hover::after {
     width: 100%;
@@ -119,6 +120,11 @@ nav > a svg {
 nav ul.show {
     display: block;
     left: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: #000;
 }
 /* menu-icon end */
 /* end nav bar  */
@@ -168,10 +174,49 @@ nav ul.show {
     transition: all 0.3s;
     font-size: 19px;
 }
-.btn0:hover,  
 .btn0:hover .span {
     background-color: var(--main-color);
     color: var(--color-fff);
+}
+.btn0:hover {
+    background-color: var(--main-color);
+    color: white;
+    box-shadow: 0 0 50px var(--main-color);
+    transition-delay: 0.5s;
+}
+.btn0::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid var(--main-color);
+    border-right: 2px solid var(--main-color);
+    transition: all 0.5s;
+    transition-delay: 0.5s;
+}
+.btn0:hover::before {
+    width: 98%;
+    height: 98%;
+    transition-delay: 0s;
+}
+.btn0::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid var(--main-color);
+    border-left: 2px solid var(--main-color);
+    transition: all 0.5s;
+    transition-delay: 0.5s;
+}
+.btn0:hover::after {
+    width: 98%;
+    height: 98%;
+    transition-delay: 0s;
 }
 /* end btn */
 /* start main section */
@@ -207,12 +252,59 @@ nav ul.show {
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
 }
+.about {
+    position: relative;
+}
 .about-content-details {
     text-align: center;
     margin-top: 70px;
     transition: all 0.3S;
     padding: 30px 10px;
     box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+}
+.about-content-details2 {
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--color-sec-one);
+    width: 400px;
+    color: var(--color-fff);
+    display: none;
+    z-index: 1000;
+    animation-name: popup;
+    /* animation-duration: 0.5s; */
+    opacity: 0;
+}
+.xmark {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    font-size: 20px;
+    color: red;
+    background-color: var(--color-ddd);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.about-content-details2::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.27);
+    width: 4000%;
+    height: 4000%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: -1;
+}
+#text:target {
+    display: block;
+    opacity: 1;
 }
 .about-content-details:hover {
     background-color: var(--main-color);
@@ -417,7 +509,7 @@ nav ul.show {
 }
 .testimonials .testimonials-content .card:hover {
     background-color: var(--main-color);
-    transform: scale(1.1);
+    transform: scale(1.5);
 } 
 .testimonials .testimonials-content .card i {
     font-size: 50px;
@@ -603,7 +695,7 @@ i.fa-brands.fa-github {
 .change-color span:nth-child(3) {
     background-color: #009aff;
 }
-.change-color i {
+.change-color i.fa-solid.fa-gear {
     position: absolute;
     left: 100%;
     top: 0;
@@ -658,80 +750,120 @@ a .btn-top {
 #dark {
     font-size: 20px;
     color: #fff;
-    background-color: #000;
+    background-color: transparent;
     border: none;
     cursor: pointer;
 }
-form {
-    position: absolute;
-    top: 200%;
-    left: 99%;
-    transform: translate(-50%, -50%);
-    transition: all 1s;
-    width: 50px;
-    height: 50px;
-    background: white;
-    box-sizing: border-box;
-    border-radius: 25px;
-    border: 4px solid white;
-    padding: 5px;
-    display: none;
-    width: 200px;
-    cursor: pointer;
-}
-form.active1 {
-    display: block;
+i.fa-solid.fa-sun {
+    color: #0661bc;
+} 
+i.fa-solid.fa-moon {
+    color: #0661bc;
 }
 
-input {
+.input-search {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 42.5px;
-    line-height: 30px;
-    outline: 0;
-    border: 0;
-    /* display: none; */
-    font-size: 16px;
-    border-radius: 20px;
-    padding: 0 20px;
-    display: block;
-}
-
-.fa {
-    box-sizing: border-box;
-    padding: 10px;
-    width: 42.5px;
-    height: 42.5px;
-    position: absolute;
-    top: 0;
-    right: -1px;
-    border-radius: 50%;
-    color: #07051a;
-    text-align: center;
+    right: 0;
+    bottom: -120%;
+    height: 0;
+    width: 0;
+    border-style: none;
+    padding: 0;
     font-size: 18px;
-    transition: all 1s;
-    border: none;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: var(--main-color);
+    padding-right: 40px;
+    color: #fff;
 }
-/* form:hover {
-    
-} */
 
-/* form:hover input {
-    display: block;
-} */
+.input-search::placeholder {
+    color: rgba(255, 255, 255, .5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
 
-/* form:hover .fa {
-    background: #07051a;
-    color: white;
-} */
-
-
-
-/* 
-swiper js 
-typed js 
-wow js 
-animate js
-*/
+.btn-search {
+    width: 69px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: transparent;
+    pointer-events: painted;
+}
+.input-search.show-search  {
+    height: 50px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--color-sec-one);
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.btn-search:hover {
+    color: var(--color-sec-one);
+}
+.input-search:hover {
+    width: 300px;
+    padding: 10px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--color-sec-one);
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+} 
+.ntifaction {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--color-sec-one);
+    padding: 15px 20px;
+    color: var(--color-fff);
+    border-radius: 25px;
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    opacity: 0;
+    display: none;
+}
+@keyframes fade {
+    50% {
+        transform: translateY(-200px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-400px);
+        opacity: 0;
+    }
+}
+.ntifaction2 {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--color-sec-one);
+    padding: 15px 20px;
+    color: var(--color-fff);
+    border-radius: 25px;
+    animation-name: fade2;
+    animation-duration: 3s;
+    animation-delay: 10s;
+    opacity: 0;
+}
+@keyframes fade2 {
+    50% {
+        transform: translateY(-200px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-400px);
+        opacity: 0;
+    }
+}

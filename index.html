@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>company-inco</title>
-    <link rel="stylesheet" href="css/dark.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({ reset: true });
+    </script>
 </head>
 <body>
     <nav class="container">
         <a href="#">
             <svg id="Layer_1" data-name="Layer 1" fill="black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1076.21 328.55">
-            <defs>
-                <!-- <style>.cls-1{fill:currentcolor;}</style> -->
-            </defs>
             <path class="cls-1"
                 d="M912.69,1.72c90.69-.33,164.16,71.67,165,161.74.88,88.91-73.51,163.86-163.1,164.31S750.1,254.6,749.4,165.4,822.61,2,912.69,1.72Zm.65,245.7c47.12.13,84.46-36.32,84.66-82.65.21-46.14-37.3-83.65-83.89-83.9s-84,36.58-84.2,83.13C829.75,211,866,247.29,913.34,247.42Z"
                 transform="translate(-1.54)" />
@@ -44,25 +45,21 @@
             <li><a class="active" href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#testimonials">Service</a></li>
-            <li><a href="">News</a></li>
+            <li><a href="#testimonials">News</a></li>
+            <li><a href="#company">Company</a></li>
             <li><a href="#footer">Contact</a></li>
-            <i class="serBtn fa-solid fa-magnifying-glass" style="z-index: 999;"></i>
-                <form action="">
-                <input type="search" placeholder="Search here …">
-                    <i class="fa fa-solid fa-magnifying-glass"></i>
-                </form>
-            
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <input type="text" class="input-search" placeholder="Type to Search...">
         </ul>
     </nav>
     <section id="home" class="home" data-ref="#">
         <div class="container">
             <div class="content">
-                <p>WE ARE CREATIVE INC.</p>
+                <p></p>
                 <h1>CLEAN SIMPLE <br> & MINIMAL</h1>
                 <P class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, eaque.</P>
                 <div class="btn-box">
-                    <a class="btn0" href="#">Read More <span class="span">></span></a>
+                    <a class="btn0" href="#text">Read More <span class="span">></span></a>
                 </div>
             </div>
         </div>
@@ -78,19 +75,19 @@
                         <i class="fa-solid fa-anchor"></i>
                         <h3>CREATIVE COMPANY</h3>
                         <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quasi optio accusamus nihil voluptate illum cumque, blanditiis rem necessitatibus consequatur.</P>
-                        <a href="#">Read More</a>
+                        <a href="#text">Read More</a>
                     </div>
                     <div class="about-content-details about-two">
                         <i class="fa-solid fa-envelope"></i>
                         <h3>CREATIVE COMPANY</h3>
                         <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quasi optio accusamus nihil voluptate illum cumque, blanditiis rem necessitatibus consequatur.</P>
-                        <a href="#">Read More</a>
+                        <a href="#text">Read More</a>
                     </div>
                     <div class="about-content-details about-three">
                         <i class="fa-solid fa-pen"></i>
                         <h3>CREATIVE COMPANY</h3>
                         <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quasi optio accusamus nihil voluptate illum cumque, blanditiis rem necessitatibus consequatur.</P>
-                        <a href="#">Read More</a>
+                        <a href="#text">Read More</a>
                     </div>
                 </div>
         </div>
@@ -107,7 +104,7 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eaque tempore sint nobis sunt aperiam commodi quos? A eius voluptatem provident molestias asperiores, error ab maxime quisquam dolores dolorum dolorem?</p>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eaque tempore sint nobis sunt aperiam commodi quos? A eius voluptatem provident molestias asperiores, error ab maxime quisquam dolores dolorum dolorem?</p>
                 <div class="btn-box">
-                    <a class="btn0 btn-creative" href="#">Read More <span class="span">></span></a>
+                    <a class="btn0 btn-creative" href="#text">Read More <span class="span">></span></a>
                 </div>
             </div>
         </div>
@@ -166,7 +163,7 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eaque tempore sint nobis sunt aperiam commodi quos? A eius voluptatem provident molestias asperiores, error ab maxime quisquam dolores dolorum dolorem?</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eaque tempore sint nobis sunt aperiam commodi quos? A eius voluptatem provident molestias asperiores, error ab maxime quisquam dolores dolorum dolorem?</p>
                     <div class="btn-box">
-                        <a class="btn0" href="#">Read More <span class="span">></span></a>
+                        <a class="btn0" href="#text">Read More <span class="span">></span></a>
                     </div>
                 </div>
             </div>
@@ -177,7 +174,7 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eaque tempore sint nobis sunt aperiam commodi quos? A eius voluptatem provident molestias asperiores, error ab maxime quisquam dolores dolorum dolorem?</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eaque tempore sint nobis sunt aperiam commodi quos? A eius voluptatem provident molestias asperiores, error ab maxime quisquam dolores dolorum dolorem?</p>
                     <div class="btn-box">
-                        <a class="btn0" href="#">Read More <span class="span">></span></a>
+                        <a class="btn0" href="#text">Read More <span class="span">></span></a>
                     </div>
                 </div>
                 <div class="img-box img-two">
@@ -194,7 +191,7 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eaque tempore sint nobis sunt aperiam commodi quos? A eius voluptatem provident molestias asperiores, error ab maxime quisquam dolores dolorum dolorem?</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eaque tempore sint nobis sunt aperiam commodi quos? A eius voluptatem provident molestias asperiores, error ab maxime quisquam dolores dolorum dolorem?</p>
                     <div class="btn-box">
-                        <a class="btn0" href="#">Read More <span class="span">></span></a>
+                        <a class="btn0" href="#text">Read More <span class="span">></span></a>
                     </div>
                 </div>
             </div>
@@ -208,7 +205,7 @@
                         <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</P>
                     </div>
                     <div class="btn-box">
-                        <a class="btn0" href="#">Read More <span class="span">></span></a>
+                        <a class="btn0" href="#text">Read More <span class="span">></span></a>
                     </div>
                 </div>
             </div>
@@ -589,10 +586,48 @@
         <span data-color="#009aff"></span>
         <button class="rest">Rest</button>
         <i class="fa-solid fa-gear"></i>
-        <button id="dark">Dark</button>
+        <button id="dark"><i class="fa-solid fa-moon"></i></button>
     </div>
     <a><i class="btn-top fa-sharp fa-solid fa-arrow-up"></i></a>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <div class="pre-loader">
+        <div class="boxes">
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <p class="ntifaction">subscription</p>
+    <p class="ntifaction2">subscription</p>
+    <p id="text" class="about-content-details2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad recusandae quae earum, facere at nam non et, laudantium
+        mollitia eaque, accusantium ex pariatur autem dicta laborum similique voluptatibus cupiditate reiciendis!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad recusandae quae earum, facere at nam non et, laudantium
+        mollitia eaque, accusantium ex pariatur autem dicta laborum similique voluptatibus cupiditate reiciendis!
+        <a href="#close">
+            <i class="xmark fa-solid fa-circle-xmark"></i>
+        </a>
+    </p>
     <script src="js/main.js"></script>
 </body>
 </html>

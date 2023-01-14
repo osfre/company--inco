@@ -1,3 +1,11 @@
+:root {
+    --main-color: #72a1c0;
+    --color-sec: #e1ebf4;
+    --color-sec-one: #0661bc;
+    --color-sec-two: #f3f8fb;
+    --color-ddd: #ddd;
+    --color-fff: #fff;
+}
 .dark {
     background-color: #021929;
 }
@@ -25,7 +33,7 @@
     color: #fff;
 }
 .dark .main-sections h3 {
-    color: #72a1c0;
+    color: var(--main-color);
 }
 .dark .main-sections h3::after {
     background-color: #ddd;

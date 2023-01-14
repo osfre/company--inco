@@ -1,3 +1,4 @@
+// // // // // // // // // // // // // // // // // // //navMobil // // // // // // // // // // // // // // // // // // // // // // // // // 
 let btn = document.querySelector("div");
 let spans = document.querySelectorAll("span");
 let ulElement = document.querySelector("ul")
@@ -19,7 +20,9 @@ links.forEach(link => {
     }
     
 });
-// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
+// // // // // // // // // // // // // // // // // // //navMobil // // // // // // // // // // // // // // // // // // // // // // // // // 
+
+// // // // // // // // // // // // // // // // // // //mainTitle // // // // // // // // // // // // // // // // // // // // // // // // // 
 let mainTitle = document.title;
 window.onblur = () => {
 	document.title = "Hey, Come Back";
@@ -27,10 +30,10 @@ window.onblur = () => {
 window.onfocus = () => {
 	document.title = mainTitle;
 }
-// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
+// // // // // // // // // // // // // // // // // // // mainTitle// // // // // // // // // // // // // // // // // // // // // // // // // 
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
-// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
+// // // // // // // // // // // // // // // // //  change-color // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 let changColor = document.querySelector(".change-color");
 let btnChangeColor = document.querySelector(".change-color i");
@@ -38,16 +41,13 @@ let spansColor = document.querySelectorAll(".change-color span");
 let root = document.querySelector(":root");
 let rest = document.querySelector(".rest");
 
-
-
 btnChangeColor.onclick = () => {
 	changColor.classList.toggle("changColor")
 }
 
-
 spansColor.forEach(el => {
 	el.onclick = () => {
-		root.style.setProperty("--main-color", el.dataset.color);
+		root.style.setProperty("--main-color", el.dataset.color); 
 		localStorage.setItem("--main-color" , el.dataset.color)
 	}
 });
@@ -65,35 +65,21 @@ rest.onclick = () => {
 	localStorage.clear("--main-color")
 	root.style.setProperty("--main-color", null);
 }
-// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
-
-// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
-let sections = document.querySelectorAll("section");
-let navlinks = document.querySelectorAll("nav ul li a");
-// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
+// // // // // // // // // // // // // // // // //  change-color // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
-let nav = document.querySelector("nav");
-let about = document.querySelector(".about");
-// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
-
-// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
-let nums  = document.querySelectorAll(".details div .num");
-let section = document.querySelector(".about-creative");
-let started = false;
-// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
-
-
 window.onscroll = () => {
-	navScroll()
+  navScroll()
 	backgrounNav()
 	Counter();
 	toTop();
 }
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
+////////////////////////////////////////  navScroll ////////////////////////////////////////////////////////////////////////
+let sections = document.querySelectorAll("section");
+let navlinks = document.querySelectorAll("nav ul li a");
 
-
-// ////////////////////////////////////////////////////////////////////////
 function navScroll() {
 	sections.forEach((section) => {
     if (scrollY >= section.offsetTop - 300) {
@@ -106,9 +92,14 @@ function navScroll() {
     }
 });
 }
-// ////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////  navScroll ////////////////////////////////////////////////////////////////////////
 
-// ////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////  backgrounNav ////////////////////////////////////////////////////////////////////////
+let nav = document.querySelector("nav");
+let about = document.querySelector(".about");
+
 function backgrounNav() { 
 	
 	if (window.scrollY >= about.offsetTop) {
@@ -122,9 +113,14 @@ function backgrounNav() {
 		}
 	}
 }
-// ////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////  backgrounNav ////////////////////////////////////////////////////////////////////////
 
-// ////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////  Counter ////////////////////////////////////////////////////////////////////////
+let nums  = document.querySelectorAll(".details div .num");
+let section = document.querySelector(".about-creative");
+let started = false;
+
 function Counter() {
 	if (window.scrollY >= section.offsetTop) {
 		if (!started) {
@@ -142,9 +138,9 @@ function Counter() {
 		}, 2000 / goal);
 	}
 }
-// ////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////  Counter ////////////////////////////////////////////////////////////////////////
 
-// ////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////  btn-top ////////////////////////////////////////////////////////////////////////
 let btnTop = document.querySelector("a .btn-top")
 function toTop() {
 	if (window.scrollY >= 400) {
@@ -163,7 +159,9 @@ btnTop.onclick = () => {
 		behavior: 'smooth',
     })
 }
-// ////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////  btn-top ////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////  dark-mood ////////////////////////////////////////////////////////////////////////
 
 let dark = document.getElementById("dark");
 let body = document.querySelector("body");
@@ -182,34 +180,30 @@ dark.onclick = () => {
 		img_company.forEach(img => {
 				img.style.fill = "black"
 	});
-		}
 }
-
-
-
-
-
-
-
-let sarech = document.querySelector("form");
-let btnSarech = document.querySelector(".serBtn");
-let close2 = document.querySelector("i.fa.fa-solid.fa-magnifying-glass");
-
-
-
-btnSarech.onclick = function() {
-	sarech.classList.toggle("active1");
+  if (body.classList.contains("dark")) {
+    dark.innerHTML = '<i class="fa-solid fa-sun"></i>';
+  } else {
+    dark.innerHTML = ' <i class="fa-solid fa-moon"></i>';
 }
-close2.onclick = function() {
-	sarech.classList.remove("active1");
 }
+////////////////////////////////////////  dark-mood ////////////////////////////////////////////////////////////////////////
 
 
 
+////////////////////////////////////////  search ////////////////////////////////////////////////////////////////////////
+
+let btnSearch = document.querySelector(".btn-search");
+let inputSearch = document.querySelector(".input-search");
+
+btnSearch.onclick = (() => {
+  inputSearch.classList.toggle("show-search");
+})
+////////////////////////////////////////  search ////////////////////////////////////////////////////////////////////////
 
 
 
-
+////////////////////////////////////////  animation ////////////////////////////////////////////////////////////////////////
 ScrollReveal().reveal(".content", {
   origin: "left",
   distance: "250px",
@@ -219,7 +213,7 @@ ScrollReveal().reveal(".content", {
   reset: true,
 });
 ScrollReveal().reveal(".about-one", {
-  origin: "left",
+  origin: "top",
   distance: "250px",
   opacity: 0,
   duration: 2000,
@@ -232,18 +226,10 @@ ScrollReveal().reveal(".about-two", {
   opacity: 0,
   duration: 2000,
   ease: "ease-in-out",
-  reset: false,
-});
-ScrollReveal().reveal(".about-three", {
-  origin: "right",
-  distance: "250px",
-  opacity: 0,
-  duration: 2000,
-  ease: "ease-in-out",
   reset: true,
 });
-ScrollReveal().reveal(".content-two", {
-  origin: "right",
+ScrollReveal().reveal(".about-three", {
+  origin: "top",
   distance: "250px",
   opacity: 0,
   duration: 2000,
@@ -251,7 +237,7 @@ ScrollReveal().reveal(".content-two", {
   reset: true,
 });
 ScrollReveal().reveal(".img-box", {
-  origin: "left",
+  origin: "bottom",
   distance: "250px",
   opacity: 0,
   duration: 2000,
@@ -265,38 +251,34 @@ ScrollReveal().reveal(".details1", {
   duration: 2000,
   ease: "ease-in-out",
   reset: true,
+  delay:150,
 });
 ScrollReveal().reveal(".details2", {
   origin: "bottom",
   distance: "250px",
   opacity: 0,
-  duration: 2300,
+  duration: 2000,
   ease: "ease-in-out",
   reset: true,
+  delay:300,
 });
 ScrollReveal().reveal(".details3", {
   origin: "bottom",
   distance: "250px",
   opacity: 0,
-  duration: 2600,
+  duration: 2000,
   ease: "ease-in-out",
   reset: true,
+  delay:450,
 });
 ScrollReveal().reveal(".details4", {
   origin: "bottom",
   distance: "250px",
   opacity: 0,
-  duration: 3000,
-  ease: "ease-in-out",
-  reset: true,
-});
-ScrollReveal().reveal(".projects-details", {
-  origin: "right",
-  distance: "250px",
-  opacity: 0,
   duration: 2000,
   ease: "ease-in-out",
   reset: true,
+  delay:600,
 });
 ScrollReveal().reveal(".card1", {
   origin: "top",
@@ -305,6 +287,7 @@ ScrollReveal().reveal(".card1", {
   duration: 2000,
   ease: "ease-in-out",
   reset: true,
+  delay:200,
 });
 ScrollReveal().reveal(".card2", {
   origin: "top",
@@ -313,6 +296,7 @@ ScrollReveal().reveal(".card2", {
   duration: 2300,
   ease: "ease-in-out",
   reset: true,
+  delay:400,
 });
 ScrollReveal().reveal(".card3", {
   origin: "top",
@@ -321,4 +305,53 @@ ScrollReveal().reveal(".card3", {
   duration: 2600,
   ease: "ease-in-out",
   reset: true,
+  delay:600,
 });
+////////////////////////////////////////  animation ////////////////////////////////////////////////////////////////////////
+
+
+
+
+////////////////////////////////////////  Loader ////////////////////////////////////////////////////////////////////////
+var loader = document.querySelector('.pre-loader');
+document.onreadystatechange = () => {
+    if (document.readyState === 'complete') {
+      fade = loader;
+        var intervalID = setInterval(function () {
+              
+            if (!fade.style.opacity) {
+                fade.style.opacity = 1;
+            }
+              
+              
+            if (fade.style.opacity > 0) {
+                fade.style.opacity -= 0.1;
+            } 
+              
+            else {
+                clearInterval(intervalID);
+            }
+              
+        }, 150);
+        loader.style.display = "none";
+    }
+};
+////////////////////////////////////////  Loader ////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////  writeText ////////////////////////////////////////////////////////////////////////
+let myName = "WE ARE CREATIVE INC.";
+let index = 0;
+
+function writeText() {
+  document.querySelector(".home .content p").textContent = myName.slice(0,index);
+  index++;
+  if (index > myName.length) {
+    index = 1;
+  }
+}
+
+setInterval(() => {
+  writeText();
+}, 300)
+////////////////////////////////////////  writeText ////////////////////////////////////////////////////////////////////////

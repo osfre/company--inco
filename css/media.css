@@ -13,6 +13,16 @@
     .btn-creative {
         left: 0;
     }
+    .img-company {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        place-content: center;
+        place-items: center;
+    }
+    .img-company div {
+    padding: 22px 11px;
+    }
+    
 }
   /* Small */
 @media (max-width: 768px) {
@@ -42,10 +52,6 @@
         background-color: #72a1c0;
         text-align: center;
         transition: all 0.5s;
-    }
-    nav ul li a {
-        color: #fff;
-        
     }
     nav ul li {
         padding: 20px 0;
@@ -131,6 +137,12 @@
     }
     .dark nav ul i {
         border-left: 0px solid #fff;
+    }
+    .btn-search {
+            display: none;
+        }
+    .about-content-details2 {
+    width: 300px;
     }
 }
   /* Medium */
